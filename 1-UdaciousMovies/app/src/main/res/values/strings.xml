@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Udacious Movies</string>
+    <string name="movies">Movies</string>
+    <string-array name="sort_order">
+        <item>Most Popular Movies</item>
+        <item>Top Rated Movies</item>
+    </string-array>
+</resources>

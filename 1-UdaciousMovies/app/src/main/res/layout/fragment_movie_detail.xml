@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#AAFFFFFF">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/activity_horizontal_margin">
+
+            <ImageView
+                android:id="@+id/poster"
+                android:layout_width="130dp"
+                android:layout_height="200dp"
+                tools:background="@android:color/background_dark" />
+
+            <TextView
+                android:id="@+id/title"
+                style="@style/Base.TextAppearance.AppCompat.Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                android:layout_toRightOf="@id/poster"
+                android:ellipsize="end"
+                android:maxLines="3"
+                android:text="deadpool" />
+
+            <TextView
+                android:id="@+id/releaseDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/title"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="16dp"
+                android:layout_toRightOf="@id/poster"
+                tools:text="Today" />
+
+            <TextView
+                android:id="@+id/rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/releaseDate"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="16dp"
+                android:layout_toRightOf="@id/poster"
+                tools:text="8.8" />
+
+            <TextView
+                android:id="@+id/summary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/poster"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="16dp"
+                android:textColor="@android:color/black"
+                tools:text="deadpool deadpool deadpool deadpool deadpool deadpool deadpool deadpool deadpool deadpool deadpool deadpool deadpool  " />
+        </RelativeLayout>
+    </ScrollView>
+</FrameLayout>
