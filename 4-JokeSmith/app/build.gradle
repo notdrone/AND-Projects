@@ -1,0 +1,43 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    sourceCompatibility = '1.7'
+    buildToolsVersion "23.0.3"
+
+    defaultConfig {
+        applicationId "com.udacity.gradle.builditbigger"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    productFlavors {
+        free {
+            applicationId "com.example.drone.free"
+            buildConfigField "Boolean", "IS_FREE", "true"
+
+        }
+        paid {
+            applicationId "com.example.drone.paid"
+            buildConfigField "Boolean", "IS_FREE", "false"
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    // Added for AdMob
+    compile project(':jokeactivitylib')
+    compile 'com.android.support:appcompat-v7:23.3.0'
+    freeCompile 'com.google.android.gms:play-services:8.4.0'
+    compile project(path: ':backend', configuration: 'android-endpoints')
+}
