@@ -1,0 +1,74 @@
+apply plugin: 'com.android.application'
+apply plugin: 'android-apt'
+
+android {
+    signingConfigs {
+        config {
+            keyAlias '1234567890'
+            keyPassword '1234567890'
+            storeFile file('../keystore.jks')
+            storePassword '1234567890'
+        }
+    }
+    compileSdkVersion 24
+    buildToolsVersion "24.0.2"
+    defaultConfig {
+        applicationId "me.droan.netsu"
+        minSdkVersion 17
+        targetSdkVersion 22
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+        }
+    }
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES.txt'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/dependencies.txt'
+        exclude 'META-INF/LGPL2.1'
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:design:24.2.1'
+    compile 'com.android.support:appcompat-v7:24.2.1'
+    compile 'com.android.support:cardview-v7:24.2.1'
+    compile 'com.google.firebase:firebase-auth:9.4.0'
+    compile 'com.firebaseui:firebase-ui-database:0.5.3'
+    compile 'com.google.android.gms:play-services-auth:9.4.0'
+    compile 'com.google.firebase:firebase-database:9.4.0'
+    compile 'com.fasterxml.jackson.core:jackson-databind:2.7.3'
+    compile 'com.google.firebase:firebase-storage:9.4.0'
+    compile 'com.jakewharton:butterknife:8.4.0'
+    compile 'uk.co.chrisjenx:calligraphy:2.2.0'
+    compile 'com.robinhood.spark:spark:1.1.2'
+    compile 'com.robinhood.ticker:ticker:1.1.0'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    apt 'com.jakewharton:butterknife-compiler:8.4.0'
+    compile 'net.danlew:android.joda:2.9.4.1'
+
+
+    compile 'com.squareup:javapoet:1.2.0'
+    compile 'ckm.simple:simple_sql_provider_annotation:1.0.6'
+    compile 'ckm.simple:simple_sql_provider_processor:1.0.6'
+}
+
+
+
+apply plugin: 'com.google.gms.google-services'

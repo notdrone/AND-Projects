@@ -1,0 +1,89 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowContentTransitions">true</item>
+        <item name="colorPrimary">@color/blue1</item>
+        <item name="colorPrimaryDark">@color/blue1</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/white</item>
+        <item name="spark_SparkViewStyle">@style/SparkStyle</item>
+    </style>
+
+    <style name="AppTheme.Login" parent="AppTheme">
+        <item name="colorPrimaryDark">@color/blue1</item>
+
+    </style>
+
+    <style name="AppTheme.Tracker" parent="AppTheme">
+        <item name="android:windowBackground">@color/white</item>
+    </style>
+
+    <style name="AppTheme.AddData" parent="AppTheme">
+        <item name="android:windowBackground">@color/white</item>
+        <item name="colorPrimaryDark">#eeeeee</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+
+    <style name="TextAppearance.Font.Mono" parent="android:TextAppearance">
+        <item name="fontPath">fonts/RobotoMono-Regular.ttf</item>
+    </style>
+
+    <style name="TextAppearance.TextLogo" parent="android:TextAppearance">
+        <item name="android:textSize">32sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="fontPath">fonts/GT-Walsheim-Bold.otf</item>
+    </style>
+
+    <style name="TextAppearance.TextNameTitle" parent="android:TextAppearance">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/monoDark</item>
+        <item name="fontPath">fonts/GT-Walsheim-Regular.otf</item>
+    </style>
+
+    <style name="TextAppearance.TextAddDataBottomSheet" parent="android:TextAppearance">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="fontPath">fonts/GT-Walsheim-Light.otf</item>
+    </style>
+
+    <style name="TextAppearance.TextAddDataTitleBottomSheet" parent="android:TextAppearance">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="fontPath">fonts/GT-Walsheim-Light.otf</item>
+    </style>
+
+    <style name="TextAppearance.DashboardDetail" parent="android:TextAppearance">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/monoDark</item>
+        <item name="fontPath">fonts/GT-Walsheim-Light.otf</item>
+    </style>
+
+    <style name="TextAppearance.AddTemperature" parent="android:TextAppearance">
+        <item name="android:textSize">32sp</item>
+        <item name="android:textColor">@color/monoDark</item>
+        <item name="fontPath">fonts/GT-Walsheim-Regular.otf</item>
+    </style>
+
+    <style name="SparkStyle" parent="@style/spark_SparkView" />
+
+    <style name="BottomSheet" parent="Theme.Design.BottomSheetDialog">
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimaryDark">@color/blue1</item>
+        <item name="android:editTextColor">@color/monoDark</item>
+        <item name="bottomSheetStyle">@style/BottomSheet.Modal</item>
+        <item name="android:textColorPrimary">@color/monoDark</item>
+    </style>
+
+    <style name="BottomSheet.Modal" parent="Widget.Design.BottomSheet.Modal">
+        <item name="behavior_peekHeight">800dp</item>
+    </style>
+
+    <style name="Toolbar">
+        <item name="popupTheme">@style/Theme.AppCompat.Light</item>
+        <item name="theme">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item>
+    </style>
+
+</resources>
