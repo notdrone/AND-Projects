@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+  <FrameLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_margin="12dp"
+      >
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/videoThumb"
+        android:layout_width="196dp"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        app:placeholderImage="@color/md_grey_200"
+        app:viewAspectRatio="1.9"
+        />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:src="@android:drawable/ic_media_play"
+        />
+  </FrameLayout>
+</LinearLayout>

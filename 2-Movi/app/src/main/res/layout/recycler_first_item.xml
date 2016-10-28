@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<me.droan.movi.view.CoolLayoutItem xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:padding="16dp"
+    >
+  <android.support.v7.widget.CardView
+      android:layout_width="match_parent"
+      android:layout_height="190dp"
+      android:layout_marginTop="24dp"
+      app:cardCornerRadius="4dp"
+      app:cardUseCompatPadding="true"
+      >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/md_white_1000"
+        android:orientation="vertical"
+        android:paddingLeft="144dp"
+        android:paddingRight="16dp"
+        android:paddingTop="8dp"
+        >
+      <RatingBar
+          android:id="@+id/rating"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:progressTint="@color/accent"
+          tools:rating="3.5"
+          style="?android:attr/ratingBarStyleSmall"
+          />
+      <TextView
+          android:id="@+id/title"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="12dp"
+          tools:text="Captain America: Civil War"
+          style="@style/Base.TextAppearance.Widget.AppCompat.Toolbar.Title"
+          />
+      <TextView
+          android:id="@+id/genre"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Action, Adventure"
+          style="@style/genreText"
+          />
+      <FrameLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_marginTop="12dp"
+          android:paddingBottom="14dp"
+          >
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12dp"
+            tools:text="As Steve Rogers struggles to embrace his role in the modern world, he teams up with a fellow Avenger and Shield agent, the Black Widow, to battle a new threat"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="16dp"
+            android:layout_gravity="bottom"
+            android:background="@drawable/cool_gradient"
+            />
+      </FrameLayout>
+    </LinearLayout>
+
+  </android.support.v7.widget.CardView>
+  <android.support.v7.widget.CardView
+      android:layout_width="135dp"
+      android:layout_height="205dp"
+      android:layout_marginLeft="8dp"
+      app:cardCornerRadius="0dp"
+      app:cardElevation="8dp"
+      app:cardUseCompatPadding="true"
+      >
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/poster"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:failureImage="@drawable/failure_image"
+        app:placeholderImage="@color/accent"
+        />
+  </android.support.v7.widget.CardView>
+
+
+</me.droan.movi.view.CoolLayoutItem>
