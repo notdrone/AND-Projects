@@ -1,0 +1,37 @@
+<resources>
+
+  <!-- Base application theme. -->
+  <style name="AppTheme"
+      parent="Theme.AppCompat.NoActionBar">
+    <item name="colorPrimary">@color/primary</item>
+    <item name="colorPrimaryDark">@color/primaryDark</item>
+    <item name="colorAccent">@color/accent</item>
+    <item name="android:windowBackground">@color/primary</item>
+    <!-- Customize your theme here. -->
+  </style>
+
+  <style name="PercentChangeTextStyle">
+    <item name="android:textSize">20sp</item>
+    <item name="android:textColor">#FFF</item>
+    <item name="android:textStyle">bold</item>
+  </style>
+
+  <style name="BidPriceTextStyle">
+    <item name="android:textSize">20sp</item>
+  </style>
+
+  <style name="StockSymbolTextStyle">
+    <item name="android:textSize">25sp</item>
+    <item name="android:textAllCaps">true</item>
+  </style>
+
+  <style name="Subtitle">
+    <item name="android:textSize">14dp</item>
+  </style>
+
+  <color name="accent">#8EFBAE</color>
+  <color name="fabTint">#5ca371</color>
+  <color name="primaryDark">#1e242e</color>
+  <color name="primary">#374255</color>
+  <color name="white">#FFF</color>
+</resources>
